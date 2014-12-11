@@ -333,38 +333,38 @@ function set_poi_props(id, props) {
 
 var markers = {
 	'default': L.icon({
-		iconUrl: '../../srift/Demo/assets/srmapexperience/img/pin_new.png',
+		iconUrl: '../../assets/srmapexperience/img/pin_new.png',
 		iconSize: [38, 54],
 		iconAnchor: [18, 54],
 		popupAnchor: [3,4],
-		shadowUrl: '../../srift/Demo/assets/srmapexperience/img/pin_shadow.png',
+		shadowUrl: '../../assets/srmapexperience/img/pin_shadow.png',
 		shadowSize: [82 ,28],
 		shadowAnchor: [38, 10]
 	}),
 	video: L.icon({
-		iconUrl: '../../srift/Demo/assets/srmapexperience/img/pin_video.png',
+		iconUrl: '../../assets/srmapexperience/img/pin_video.png',
 		iconSize: [38, 54],
 		iconAnchor: [18, 54],
 		popupAnchor: [3,4],
-		shadowUrl: '../../srift/Demo/assets/srmapexperience/img/pin_shadow.png',
+		shadowUrl: '../../assets/srmapexperience/img/pin_shadow.png',
 		shadowSize: [82 ,28],
 		shadowAnchor: [38, 10]
 	}),
 	monster: L.icon({ // Duplicate of video with alt icon
-		iconUrl: '../../srift/Demo/assets/srmapexperience/img/pin_monster.png',
+		iconUrl: '../../assets/srmapexperience/img/pin_monster.png',
 		iconSize: [38, 54],
 		iconAnchor: [18, 54],
 		popupAnchor: [3,4],
-		shadowUrl: '../../srift/Demo/assets/srmapexperience/img/pin_shadow.png',
+		shadowUrl: '../../assets/srmapexperience/img/pin_shadow.png',
 		shadowSize: [82 ,28],
 		shadowAnchor: [38, 10]
 	}),
 	hidden: L.icon({
-		iconUrl: '../../srift/Demo/assets/srmapexperience/img/pin_hidden.png',
+		iconUrl: '../../assets/srmapexperience/img/pin_hidden.png',
 		iconSize: [38, 54],
 		iconAnchor: [18, 54],
 		popupAnchor: [3,4],
-		shadowUrl: '../../srift/Demo/assets/srmapexperience/img/pin_shadow_hidden.png',
+		shadowUrl: '../../assets/srmapexperience/img/pin_shadow_hidden.png',
 		shadowSize: [82 ,28],
 		shadowAnchor: [38, 10]
 	})
@@ -374,7 +374,7 @@ var markers = {
 	Map
 ========================== */
 
-var map_asset_url = '../../srift/Demo/sr-map-assets';
+var map_asset_url = '../../sr-map-assets';
 
 var maxBounds = L.latLngBounds(
 	L.latLng(-85.0511,-180),
