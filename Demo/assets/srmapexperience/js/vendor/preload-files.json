@@ -1,0 +1,107 @@
+{
+  "files": [{
+    "source": "../../srift/Demo/assets/srmapexperience/img/intro_bg.jpg",
+    "type": "IMAGE",
+    "size": 480891
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/img/intro_frame.png",
+    "type": "IMAGE",
+    "size": 564640
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/img/title_welcome.png",
+    "type": "IMAGE",
+    "size": 8517
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/img/btn_intro.jpg",
+    "type": "IMAGE",
+    "size": 6785
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/img/dropdown_bg.jpg",
+    "type": "IMAGE",
+    "size": 9891
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/img/logo_lol.png",
+    "type": "IMAGE",
+    "size": 7356
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/img/map_zoom_bg.png",
+    "type": "IMAGE",
+    "size": 3498
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/img/pin_hidden.png",
+    "type": "IMAGE",
+    "size": 83
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/img/pin_new.png",
+    "type": "IMAGE",
+    "size": 645
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/img/pin_video.png",
+    "type": "IMAGE",
+    "size": 1011
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/img/pin_shadow.png",
+    "type": "IMAGE",
+    "size": 844
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/img/pin_shadow_hidden.png",
+    "type": "IMAGE",
+    "size": 83
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/img/popup_bg.jpg",
+    "type": "IMAGE",
+    "size": 9309
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/img/popup_tip.png",
+    "type": "IMAGE",
+    "size": 334
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/img/popup_title_dash.png",
+    "type": "IMAGE",
+    "size": 159
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/img/share_btn_bg.png",
+    "type": "IMAGE",
+    "size": 1931
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/img/share_btn_sm.png",
+    "type": "IMAGE",
+    "size": 1957
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/js/vendor/parallax.min.js",
+    "type": "SCRIPT",
+    "size": 9350
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/js/vendor/modernizr-2.6.2.min.js",
+    "type": "SCRIPT",
+    "size": 15414
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/js/vendor/enquire/dist/enquire.min.js",
+    "type": "SCRIPT",
+    "size": 2254
+  },
+  {
+    "source": "../../srift/Demo/assets/srmapexperience/js/vendor/media-match/media.match.min.js",
+    "type": "SCRIPT",
+    "size": 2980
+  }]
+}

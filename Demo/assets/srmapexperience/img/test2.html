@@ -1,0 +1,565 @@
+<html class=" modern-browser js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" style=""><!--<![endif]--><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Summoner's Rift | League of Legends</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="http://promo.euw.leagueoflegends.com/assets/srmapexperience/img/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="152x152" href="http://promo.euw.leagueoflegends.com/assets/srmapexperience/img/apple-touch-icon-precomposed.png">
+      
+        <link rel="stylesheet" href="../../srift/bootleaf/assets/srmapexperience/css/normalize.min.css">
+        <link rel="stylesheet" href="../../srift/bootleaf/assets/srmapexperience/css/leaflet/leaflet.css">
+        <link rel="stylesheet" href="../../srift/bootleaf/assets/srmapexperience/css/owl.carousel.css">
+        <link rel="stylesheet" href="../../srift/bootleaf/assets/srmapexperience/css/main.css">
+
+				<meta property="og:title" content="Demo | LoL Map">
+				<meta property="og:image" content="../../srift/bootleaf/assets/reborn/img/SRU_share.jpg">
+				<meta property="og:site_name" content="Summoner's Rift">
+				<meta property="og:description" content="The environment and monsters of Summoner’s Rift have been updated! Come take a look at League's revamped home.">
+		    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../srift/bootleaf/assets/srmapexperience/js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../../srift/bootleaf/assets/srmapexperience/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="../../srift/bootleaf/assets/srmapexperience/js/vendor/jquery.html5Loader.custom.js"></script>
+        <script src="../../srift/bootleaf/assets/srmapexperience/js/vendor/jquery.html5Loader.min.js"></script>
+        <script>var base = document.createElement('a');base.href=location.href.replace(/\#.*$/, '');</script>
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+<style>
+            #html5Loader{
+              top:0;
+              left:0;
+              background-color:#000;
+              margin:0;
+              position:fixed;
+              z-index: 20000;
+            }
+            #html5Loader .fallback {
+              top:50%;
+              position:absolute;
+              text-align:center;
+              width:100%;
+              color:white;
+              vertical-align: middle;
+              display: block;
+            }
+            .loader-wrapper {
+              position: absolute;
+              top: 100px;
+              left: 50%;
+              width: 320px;
+              margin: 0 -160px;
+            }
+            @media only screen and (min-width: 768px) {
+              .loader-wrapper {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 320px;
+                height: 320px;
+                margin: -160px;
+              }
+            }
+
+               .logo-lol-loader {
+              display: block;
+              width: 315px;
+              height: 106px;
+              margin: auto;
+              background: url(data:image/jpeg;base64,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) no-repeat center;
+              background-size: contain;
+            }
+
+              @media only screen and (max-width: 767px) {
+
+                .logo-lol-loader {
+                    width: 200px;
+                    height: 76px;
+                }
+
+              }
+              .lt-ie9 .symbol {
+                display: none;
+              }
+
+            .symbol {
+              width: 136px;
+              height: 17px;
+              margin: 20px auto;
+              padding: 2px;
+              background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIgAAAARCAYAAAAG0+TZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RjFBNTVDOEI0OTFFMTFFNEJDRkE5NzhGNDE2M0NFRTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RjFBNTVDOEM0OTFFMTFFNEJDRkE5NzhGNDE2M0NFRTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGMUE1NUM4OTQ5MUUxMUU0QkNGQTk3OEY0MTYzQ0VFNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGMUE1NUM4QTQ5MUUxMUU0QkNGQTk3OEY0MTYzQ0VFNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsoQJ0AAAALUSURBVHja7Jm/jtQwEMZnUBokSooTNfQ0PA8SBS2i4Gl4AQpqnoAOJDqQENdQICFRXIF02fzxh2N77LHj3O6KCzQeaS9OxslFyW+/+TzLH94+e0hEr6hFi3V866bJXNjB8/YsWlTivQVkcqNPX37Sm3ef7YiJ2WfDZjmSdkKCKZ+UpXn7P3J76H8VOJZHMRcyxupkqAmIx0AX9+/Ry6dP3H43DLMbXE936PL7VXi5ChJOrzYDhyM6dVA4x6GBsScoUCCsJyHQgAoc0KfDHwF3JFx0h2F0A6NI4nCBBQjZ6qTbpD+rHElK9uwF0FRkHwVRkoHKJJSyUihHkg6lMvYFCRfdcPAlxrhSs0xgNzHBwX7ryJIXv8z06iFcclFIkB3DWTLZ4jxiUJUMulExdAnKy4/dgyHhout7T8poATEBhAgF+5oUaw20BMhFlT/RCHNJRNONnYvMhsdIX+IqGHoekg8RLrr+4AfOrALxgkyc8ZAdg+YFIV/4DeRccNON/fBAbQgqfWlmYIECFlEPcgoiXHSHQMo0TP4k97ZDLckIYeUpyjvk8tZy39LKyv7AYAOiAoRs3QK9eklqY2ZDh6gg/eBLzDB4esK3PTenHhhodYiVhR1Y5dJW3zC36vLPoFjnsDKvKFSkBAXzTMJFKjF2WePKCJICIHoMRFuBTDD4NG1AsyB71RjclC4hwdoq6tIiOWPNaCwxYkYmewAmyUZSELXGDrm4kuHkPHLF4KMGqsUeioIjoGg4UAEl9EFsiYkmVZYz46Ig6mrSC8k6X6itTtbNDVdytiSjKcktN0J0CkcVBieoipmRlrnSEBnHqei28Ql3xpvVA9m6pjVB/gszKBvpa9+CyrzZGNUoCy3VYTSrupV7je1bK5uqdYFp0nH7YOBsf5L/VlNvrM2LgkirXX6se/TgLr1+8bg99Rb0u5/o49crAcS4wY9f1+7TooWOPwIMADsF9bXNCdsrAAAAAElFTkSuQmCC) no-repeat top left;
+            }
+            .progress {
+              width: 132px;
+              height: 13px;
+              background: url(data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABVAAD/4QMraHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MCA2MS4xMzQ3NzcsIDIwMTAvMDIvMTItMTc6MzI6MDAgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkZDMUZDM0RDNDkyQTExRTRCQ0ZBOTc4RjQxNjNDRUU3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkZDMUZDM0RENDkyQTExRTRCQ0ZBOTc4RjQxNjNDRUU3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RkMxRkMzREE0OTJBMTFFNEJDRkE5NzhGNDE2M0NFRTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RkMxRkMzREI0OTJBMTFFNEJDRkE5NzhGNDE2M0NFRTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAmQWRvYmUAZMAAAAABAwAVBAMGCg0AAAXOAAAGIwAABvUAAAgz/9sAhAACAQEBAQECAQECAwIBAgMDAgICAgMDAwMDAwMDBQMEBAQEAwUFBQYGBgUFBwcICAcHCgoKCgoMDAwMDAwMDAwMAQICAgQDBAcFBQcKCAcICgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wgARCAANAIQDAREAAhEBAxEB/8QArwAAAgMAAwAAAAAAAAAAAAAAAwQAAgUGBwgBAAMBAQEBAAAAAAAAAAAAAAECAwAEBQYQAAECBQQCAwEAAAAAAAAAAAABAhESAxMEECEUBSQVIDAjMxEAAQMDAwMFAAAAAAAAAAAAAAERIhAhMUFhAlESMnGBAxMjEgEAAAAAAAAAAAAAAAAAAABQEwACAgEDAwQDAQAAAAAAAAAAAREhMRBBUWFxoSCBkdHwscHh/9oADAMBAAIRAxEAAAHxL1eW68WmlQEeN8CsjLT3r8KqustCsjrxdeLBmy6TDr3zfpCsvIejzzFTtPOl0naelTn17ckwOyOvG2BCrbyuRMP/2gAIAQEAAQUC46mPgU6ovSuPU10FwajRMJRMFSj1j6rqPWJSTN65yvb1j1G9VUUp9E9SvgPVMfp7LPWuPWvEtDbRR/nsfjb8aLeOYdqZvHKvDkxuHInGPHKPBE4h4h403//aAAgBAgABBQKAiEhKQIECUlFaSkpIQEaSkv0Jqmu3w//aAAgBAwABBQKIr4F0uE5MTC1Bag15cLgtYRwtQnJ9V130dokR0TfRYm5vp//aAAgBAgIGPwIL/9oACAEDAgY/Agv/2gAIAQEBBj8CGXk3PoxFS1xuSNXtQbigisWQshOx9PxpdcjNLUwYtVO/yJIjep+uCPjSONaTI+9LEc02Nj//2gAIAQEDAT8hXEe60f1Inc/dQNiETcb+RrLbqjinFE1Pd8Gb7d7swLRHnRFrDW+iHyaw43LkKoccDINlsIm5ollZJ4Pf/RuPkEz0oV1ecmeT4Slp2/n6G49oSk7r8tN5T7wr9iu3XKUnU8HW/gtB/9oACAECAwE/IRLon6OpCh6JQZh9ItKKK00OCBRQhRRR/9oACAEDAwE/IS7RiQellSJtJhoIN8n17HJnpc1ockxzqDF+jLP/2gAMAwEAAhEDEQAAEAMqiE1ZODpVU0uc2x//2gAIAQEDAT8QMbph2MztQxVDfh/kmzdBMWlD4J+zZwklOU9pGCz/AJIE82xUnLE+O2dWctirM3dHG6k/2JG2NLMJuPg6aYY/0ie2uY2yWZ4JHcIY/D4LYMKy+F0RlOnY8Xw57ic/C+xIJO9Qrn2Y6RWhuhxtROyPySiOiUnPY2Sjtuo369hK5JYRx1hibn4X2QSU4KhJRtzYkrfhfYrrIlN2JdJa2Fyc9it1sWNPwvsVoQOpoceiV+xZpvzmxYW3w+xKKm5f0vBG9jiFH7mT/9oACAECAwE/EAncNudCayIIPbTMbE4mG7jsIhaJCgUGN6YXoQhNCFdnGLQ4ha7/2gAIAQMDAT8Qal5EruJd0TiwGNBIhljHlsWk0IW4luIYEqxPIkB6CEowRw38f6MjpenVejfRfeguZyD0cT//2Q==) no-repeat top left;
+              -webkit-transition: all .3s;
+              -o-transition: all .3s;
+              transition: all .3s;
+            }
+        </style>
+
+
+    </head>
+
+
+    <body class="header-body en_GB" style="">
+
+        <div id="html5Loader" style="width: 1920px; height: 952px;">
+            <div class="loader-wrapper">
+                <div class="logo-lol-loader"></div>
+                <div class="symbol">
+                    <div class="progress" style="width: 7%;"></div>
+                </div>
+            </div>
+        <i class="fallback"></i></div>
+
+        <div class="landing">
+
+            <div class="intro">
+
+                    <h1 class="intro-title" style="background-image: url(../../srift/bootleaf/assets/srmapexperience/img/title_welcome_en_GB.png);">ed Summoner's</h1>
+
+                    <div class="intro-content">
+                      <p>An interactive web based map demo for Summoners Rift V1.0.1</p>
+                    </div>
+
+                    <a href="http://104.131.20.36/srift/bootleaf/test2.html#the-bases" class="btn btn-intro js-close-intro">Demo Guide 1</a>
+                    <a href="http://104.131.20.36/srift/bootleaf/test2.html#the-bases" class="btn btn-intro js-close-intro">Demo Guide 2</a>
+                    <a href="http://104.131.20.36/srift/bootleaf/test2.html#the-bases" class="btn btn-intro js-close-intro">Free Range</a>
+                    <p class="intro-small"><a href="" class="js-close-intro">Suggestions</a><a href="" class="js-close-intro">Bug Reports</a>
+                    <a href="" class="js-close-intro">Contact Me</a></p>
+
+
+
+                    
+                        
+
+                </div>
+        
+        </div><!-- /.landing -->
+       
+ <div class="wrapper">
+            
+            <div class="header">
+                <a href="http://euw.leagueoflegends.com/en/" class="logo-lol" target="_blank">League of Legends</a>
+                <h1><span class="lol-text">Summoner's Rift</span></h1>
+
+                <div class="aside">
+                   <div class="aside-content">
+                        <div class="btn-nav"><i class="fa fa-navicon"></i><i class="fa fa-times hidden"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="dropdown-title">
+                    <h2><span class="lol-text lol-text-centered">Explore the Rift</span></h2>            
+                </div>
+                <div class="poi">
+                    <div id="poi-carousel" class="poi-list hidden-xs js-carousel owl-carousel owl-theme" style="display: block; opacity: 1;">
+                        <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 5122px; left: 0px; display: block;"><div class="owl-item" style="width: 197px;"><div class="poi-item">
+                            <a href="#the-bases" title="The Bases">
+                                <div class="poi-thumb-wrap">
+                                  <div class="poi-thumb">
+                                      <img src="../../srift/bootleaf/assets/srmapexperience/img/poi/the-bases.jpg" width="204" height="113">
+                                  </div>
+                                </div>
+                                <h5 class="poi-title">The Bases</h5>
+                            </a>
+                        </div></div><div class="owl-item" style="width: 197px;"><div class="poi-item">
+                            <a href="#inhibitor-timers" title="Inhibitor Timers">
+                                <div class="poi-thumb-wrap">
+                                  <div class="poi-thumb">
+                                    <img src="../../srift/bootleaf/assets/srmapexperience/img/poi/inhibitor-timers.jpg" width="204" height="113">
+                                  </div>
+                                </div>
+                                <h5 class="poi-title">Inhibitor Timers</h5>
+                            </a>
+                        </div></div><div class="owl-item" style="width: 197px;"><div class="poi-item">
+                            <a href="#the-murkwolves" title="The Murkwolves">
+                                <div class="poi-thumb-wrap">
+                                  <div class="poi-thumb">
+                                    <img src="../../srift/bootleaf/assets/srmapexperience/img/poi/the-murkwolves.jpg" width="204" height="113">
+                                  </div>
+                                </div>
+                                <h5 class="poi-title">The Murkwolves</h5>
+                            </a>
+                        </div></div><div class="owl-item" style="width: 197px;"><div class="poi-item">
+                            <a href="#gromp" title="Gromp">
+                                <div class="poi-thumb-wrap">
+                                  <div class="poi-thumb">
+                                    <img src="../../srift/bootleaf/assets/srmapexperience/img/poi/gromp.jpg" width="204" height="113">
+                                  </div>
+                                </div>
+                                <h5 class="poi-title">Gromp</h5>
+                            </a>
+                        </div></div><div class="owl-item" style="width: 197px;"><div class="poi-item">
+                            <a href="#fail-flashes-be-gone" title="Fail flashes be gone!">
+                                <div class="poi-thumb-wrap">
+                                  <div class="poi-thumb">
+                                    <img src="../../srift/bootleaf/assets/srmapexperience/img/poi/fail-flashes-be-gone.jpg" width="204" height="113">
+                                  </div>
+                                </div>
+                                <h5 class="poi-title">Fail flashes be gone!</h5>
+                            </a>
+                        </div></div><div class="owl-item" style="width: 197px;"><div class="poi-item">
+                            <a href="#baron-nashor" title="Dragon">
+                                <div class="poi-thumb-wrap">
+                                  <div class="poi-thumb">
+                                    <img src="../../srift/bootleaf/assets/srmapexperience/img/poi/baron-nashor.jpg" width="204" height="113">
+                                  </div>
+                                </div>
+                                <h5 class="poi-title">Baron Nashor</h5>
+                            </a>
+                        </div></div><div class="owl-item" style="width: 197px;"><div class="poi-item">
+                            <a href="#four-quadrants" title="Four Quadrants">
+                                <div class="poi-thumb-wrap">
+                                  <div class="poi-thumb">
+                                    <img src="../../srift/bootleaf/assets/srmapexperience/img/poi/four-quadrants.jpg" width="204" height="113">
+                                  </div>
+                                </div>
+                                <h5 class="poi-title">Four Quadrants</h5>
+                            </a>
+                        </div></div><div class="owl-item" style="width: 197px;"><div class="poi-item">
+                            <a href="#the-raptors" title="The Raptors">
+                                <div class="poi-thumb-wrap">
+                                  <div class="poi-thumb">
+                                    <img src="../../srift/bootleaf/assets/srmapexperience/img/poi/the-raptors.jpg" width="204" height="113">
+                                  </div>
+                                </div>
+                                <h5 class="poi-title">The Raptors</h5>
+                            </a>
+                        </div></div><div class="owl-item" style="width: 197px;"><div class="poi-item">
+                            <a href="#destructible-structures" title="Destructible Structures">
+                                <div class="poi-thumb-wrap">
+                                  <div class="poi-thumb">
+                                    <img src="../../srift/bootleaf/assets/srmapexperience/img/poi/destructible-structures.jpg" width="204" height="113">
+                                  </div>
+                                </div>
+                                <h5 class="poi-title">Destructible Structures</h5>
+                            </a>
+                        </div></div><div class="owl-item" style="width: 197px;"><div class="poi-item">
+                            <a href="#blue-sentinel" title="Blue Sentinel">
+                                <div class="poi-thumb-wrap">
+                                  <div class="poi-thumb">
+                                    <img src="../../srift/bootleaf/assets/srmapexperience/img/poi/blue-sentinel.jpg" width="204" height="113">
+                                  </div>
+                                </div>
+                                <h5 class="poi-title">Blue Sentinel</h5>
+                            </a>
+                        </div></div><div class="owl-item" style="width: 197px;"><div class="poi-item">
+                            <a href="#dragon" title="Dragon">
+                                <div class="poi-thumb-wrap">
+                                  <div class="poi-thumb">
+                                    <img src="../../srift/bootleaf/assets/srmapexperience/img/poi/dragon.jpg" width="204" height="113">
+                                  </div>
+                                </div>
+                                <h5 class="poi-title">Dragon</h5>
+                            </a>
+                        </div></div><div class="owl-item" style="width: 197px;"><div class="poi-item">
+                            <a href="#the-krugs" title="The Krugs">
+                                <div class="poi-thumb-wrap">
+                                  <div class="poi-thumb">
+                                    <img src="../../srift/bootleaf/assets/srmapexperience/img/poi/the-krugs.jpg" width="204" height="113">
+                                  </div>
+                                </div>
+                                <h5 class="poi-title">The Krugs</h5>
+                            </a>
+                        </div></div><div class="owl-item" style="width: 197px;"><div class="poi-item">
+                            <a href="#red-brambleback" title="Red Brambleback">
+                                <div class="poi-thumb-wrap">
+                                  <div class="poi-thumb">
+                                    <img src="../../srift/bootleaf/assets/srmapexperience/img/poi/red-brambleback.jpg" width="204" height="113">
+                                  </div>
+                                </div>
+                                <h5 class="poi-title">Red Brambleback</h5>
+                            </a>
+                        </div></div></div></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    <div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page active"><span class=""></span></div><div class="owl-page"><span class=""></span></div></div><div class="owl-buttons"><div class="owl-prev"><i class="fa fa-chevron-left"></i></div><div class="owl-next"><i class="fa fa-chevron-right"></i></div></div></div></div>
+
+                    <div class="poi-list visible-xs">
+                        <div class="poi-item">
+                            <a href="#the-bases" title="The Bases">
+                                <h5 class="poi-title">The Bases</h5>
+                            </a>
+                        </div>
+                        <div class="poi-item">
+                            <a href="#inhibitor-timers" title="Inhibitor Timers">
+                                <h5 class="poi-title">Inhibitor Timers</h5>
+                            </a>
+                        </div>
+                        <div class="poi-item">
+                            <a href="#the-murkwolves" title="The Murkwolves">
+                                <h5 class="poi-title">The Murkwolves</h5>
+                            </a>
+                        </div>
+                        <div class="poi-item">
+                            <a href="#gromp" title="Gromp">
+                                <h5 class="poi-title">Gromp</h5>
+                            </a>
+                        </div>
+                        <div class="poi-item">
+                            <a href="#fail-flashes-be-gone" title="Fail flashes be gone!">
+                                <h5 class="poi-title">Fail flashes be gone!</h5>
+                            </a>
+                        </div>
+                        <div class="poi-item">
+                            <a href="#baron-nashor" title="Baron Nashor">
+                                <h5 class="poi-title">Baron Nashor</h5>
+                            </a>
+                        </div>
+                        <div class="poi-item">
+                            <a href="#four-quadrants" title="Four Quadrants">
+                                <h5 class="poi-title">Four Quadrants</h5>
+                            </a>
+                        </div>                        
+												<div class="poi-item">
+                            <a href="#the-raptors" title="The Raptors">
+                                <h5 class="poi-title">The Raptors</h5>
+                            </a>
+                        </div>
+                        <div class="poi-item">
+                            <a href="#destructible-structures" title="Destructible Structures">
+                                <h5 class="poi-title">Destructible Structures</h5>
+                            </a>
+                        </div>
+                        <div class="poi-item">
+                            <a href="#blue-sentinel" title="Blue Sentinel">
+                                <h5 class="poi-title">Blue Sentinel</h5>
+                            </a>
+                        </div>
+                        <div class="poi-item">
+                            <a href="#dragon" title="Dragon">
+                                <h5 class="poi-title">Dragon</h5>
+                            </a>
+                        </div>
+                        <div class="poi-item">
+                            <a href="#the-krugs" title="The Krugs">
+                                <h5 class="poi-title">The Krugs</h5>
+                            </a>
+                        </div>
+                        <div class="poi-item">
+                            <a href="#red-brambleback" title="Red Brambleback">
+                                <h5 class="poi-title">Red Brambleback</h5>
+                            </a>
+                        </div>
+                    </div>                                   
+                </div>
+            </div><!-- /.dropdown -->
+
+<div id="map" class="leaflet-container leaflet-fade-anim popup-active" tabindex="0"></div>
+            <div id="fullscreen-container" class="leaflet-container leaflet-container-mobile">
+                <div class="leaflet-popup-content-wrapper">
+                    <a href="javascript:void('close');" class="leaflet-popup-close-button close-button">×</a>
+                    <div class="content"></div>
+                </div>
+            </div>
+
+        </div><!-- /.wrapper -->
+</div>
+
+        <script>
+
+                    /* Preloader */
+            var loaderAnimation = $("#html5Loader").LoaderAnimation({
+                onComplete:function(){
+                    console.log("preloader animation completed!");
+                }
+            });
+            $.html5Loader({
+                    filesToLoad: '../../srift/bootleaf/assets/srmapexperience/js/vendor/preload-files.json',
+                    onComplete: function () {
+                        console.log("All the assets are loaded!");
+                    },
+                    onUpdate: loaderAnimation.update
+            });
+
+            var intro_text = [
+              "Take\x20the\x20Tour",
+              "Let\u2019s\x20go,\x20let\u2019s\x20go\x21",
+              "I\x20wanna\x20click\x20something\x21",
+              "Okay.",
+              "Let\x20me\x20at\x20\u2018em\x21",
+              "Time\x20to\x20scroll\x21",
+              "Shall we begin?"
+            ];
+
+						var poi = {
+							"the-bases": {
+								position: [-80.5, -133],
+								type: "default",
+								anchor: "bottom",
+								popup: {
+									title: "The\x20Bases",
+									description: "The Rift's two new bases incorporate unique architectural and stylistic elements to help you quickly orient yourself on the map. The south base features a bold and angular look in its nexus, inhibs, towers and minions, whereas the north base uses sweeping curves and smooth lines."
+								}
+							},
+							"baron-nashor": {
+								position: [-36, -74],
+								type: "monster",
+								anchor: "top",
+								popup: {
+									title: "Baron\x20Nashor",
+									description: "The\x20ol\u2019\x20Baron\x20pit,\x20home\x20to\x20countless\x20broken\x20dreams\x20as\x20well\x20as\x20the\x20Rift\u2019s\x20meanest\x20monster.\x20You\u2019ll\x20ward\x20here,\x20you\u2019ll\x20fight\x20here,\x20you\u2019ll\x20die\x20here,\x20and\x20if\x20you\u2019re\x20extra\x20awesome,\x20you\x20might\x20just\x20win\x20games\x20here.\x20Kill\x20Baron\x20and\x20you\u2019ll\x20give\x20your\x20team\x20the\x20baron\x20buff\x20along\x20with\x20a\x20good\x20chunk\x20of\x20gold\x21",
+									src: "http://www.youtube.com/embed/BIEuKcvhl80?rel=0"
+								}
+							},
+							"dragon": {
+								position: [-72.5, 9],
+								type: "monster",
+								popup: {
+									title: "Dragon",
+									description: "Dragon\u2019s\x20back\x20and\x20burnier\x20than\x20ever\x20before.\x20Instead\x20of\x20breathing\x20itty\x2Dbitty\x20fireballs\x20at\x20whoever\u2019s\x20closest\x20to\x20him,\x20now\x20he\x20blasts\x20his\x20target\x20with\x20fire\x20that\x20hurts\x20nearby\x20allies.",
+									src: "http://www.youtube.com/embed/D7TCLQBzeFA?rel=0"
+								}
+							},
+							"red-brambleback": {
+								position: [-74, -30],
+								type: "monster",
+								anchor: "bottom",
+								popup: {
+									title: "Red\x20Brambleback",
+									description: "Summoner\u2019s\x20Rift\x20features\x20two\x20of\x20these\x20terrors.\x20The\x20red\x20bramblebacks\x20fight\x20fiercely,\x20but\x20killing\x20one\x20grants\x20their\x20slayer\x20the\x20Crest\x20of\x20Cinders,\x20which\x20burns\x20and\x20slows\x20any\x20enemies\x20struck.",
+									src: "http://www.youtube.com/embed/3XGsoigRdY8?rel=0"
+								}
+							},
+							"blue-sentinel": {
+								position: [-58.5, 19.5],
+								type: "monster",
+								anchor: "bottom",
+								popup: {
+									title: "Blue\x20Sentinel",
+									description: "You\u2019ll\x20find\x20a\x20couple\x20of\x20blue\x20sentinels\x20as\x20you\x20wander\x20through\x20the\x20Rift.\x20Though\x20they\u2019re\x20passive\x20enough\x20when\x20left\x20alone,\x20they\x20pack\x20quite\x20the\x20punch\x20when\x20threatened\x20by...\x20say...\x20you.\x20Still,\x20killing\x20a\x20blue\x20sentinel\u2019s\x20definitely\x20worth\x20the\x20trouble\x3A\x20on\x20top\x20of\x20the\x20gold,\x20their\x20killer\x20gains\x20the\x20Crest\x20of\x20Insight,\x20which\x20increases\x20mana\x20regen\x20and\x20decreases\x20ability\x20cooldowns.",
+									src: "http://www.youtube.com/embed/nT-FUfaTnHc?rel=0"
+								}
+							},
+							"gromp": {
+								position: [-48, -119],
+								type: "monster",
+								anchor: "bottom",
+								popup: {
+									title: "Gromp",
+									description: "Having\x20enjoyed\x20League\u2019s\x20fastest\x20growth\x20spurt\x20since\x20Lulu\x20ulted\x20Zac\x20with\x20homeguard\x20boots\x20and\x20six\x20warmogs,\x20Gromp\u2019s\x20quickly\x20made\x20quite\x20the\x20impact\x20on\x20the\x20Rift.\x20Kill\x20the\x20big\x20guy\x20for\x20gold\x21",
+									src: "http://www.youtube.com/embed/boUMqv-ejpw?rel=0"
+								}
+							},
+							"the-krugs": {
+								position: [-78, -21],
+								type: "monster",
+								anchor: "bottom",
+								popup: {
+									title: "The\x20Krugs",
+									description: "Contrary\x20to\x20popular\x20belief,\x20the\x20krugs\x20are\x20not\x20related\x20to\x20Malphite,\x20League\u2019s\x20rockiest\x20of\x20champs.\x20They\x20are,\x20however,\x20worth\x20a\x20fair\x20chunk\x20of\x20gold\x20to\x20anyone\x20strong\x20enough\x20to\x20chip\x20them\x20into\x20oblivion.",
+									src: "http://www.youtube.com/embed/-WrtuUS9PBc?rel=0"
+								}
+							},
+							"the-murkwolves": {
+								position: [-61, -90],
+								type: "monster",
+								anchor: "bottom",
+								popup: {
+									title: "The\x20Murkwolves",
+									description: "Typically\x20easy\x20pocket\x20money\x20for\x20any\x20jungler\x20worth\x20their\x20salt,\x20the\x20murkwolves\x20still\x20bite\x20hard\x20when\x20they\x20get\x20the\x20chance.\x20Of\x20course,\x20if\x20you\u2019re\x20playing\x20Warwick,\x20your\x20primary\x20role\x20is\x20to\x20defend\x20these\x20poor\x20guys\x20with\x20all\x20your\x20heart.",
+									src: "http://www.youtube.com/embed/3GsM2VSMoFw?rel=0"
+								}
+							},
+							"the-raptors": {
+								position: [-45, -30],
+								type: "monster",
+								anchor: "top",
+								popup: {
+									title: "The\x20Raptors",
+									description: "The\x20Raptors\x20might\x20not\x20hit\x20the\x20hardest\x20of\x20the\x20Rift\u2019s\x20monsters,\x20but\x20killing\x20them\x20is\x20a\x20great\x20way\x20to\x20pass\x20the\x20time\x20when\x20you\u2019re\x20mid\x20and\x20trying\x20to\x20catch\x20up\x20in\x20farm.",
+									src: "http://www.youtube.com/embed/6sI7kPzp3y0?rel=0"
+								}
+							},
+							"fail-flashes-be-gone": {
+								position: [-49, -90],
+								type: "default",
+								anchor: "top",
+								popup: {
+									title: "Fail\x20flashes\x20be\x20gone\x21",
+									description: "There\u2019s\x20nothing\x20worse\x20than\x20flashing\x20to\x20EXACTLY\x20WHERE\x20YOU\x20ALREADY\x20ARE,\x20and\x20while\x20clumsy\x20fingers\x20might\x20still\x20betray\x20you\x20on\x20the\x20new\x20map,\x20the\x20map\x20itself\x20won\u2019t.\x20We\u2019ve\x20updated\x20Summoner\u2019s\x20Rift\x20to\x20better\x20match\x20the\x20navigation\x20mesh\x20underneath,\x20so\x20you\x20can\x20walk\x20over\x20walkable\x20terrain\x20and\x20more\x20accurately\x20figure\x20out\x20whether\x20a\x20wall\x20can\x20be\x20flashed\x20or\x20not.\x20Generally\x20speaking,\x20if\x20terrain\x20has\x20elements\x20of\x20height,\x20like\x20this\x20guy\x20here,\x20you\u2019ll\x20have\x20a\x20hard\x20time\x20flashing\x20over\x20it."
+								}
+							},
+							"inhibitor-timers": {
+								position: [-77, -105],
+								type: "video",
+								anchor: "bottom",
+								popup: {
+									title: "Inhibitor\x20Timers",
+									description: "Summoner\u2019s\x20Rift\x20isn\u2019t\x20just\x20about\x20brushing\x20up\x20the\x20old\x20\u2013\x20we\u2019ve\x20also\x20added\x20a\x20few\x20new\x20clarity\x20tweaks,\x20like\x20inhibitor\x20timers\x21\x20A\x20circle\x20of\x20light\x20slowly\x20forms\x20around\x20inhibs\x20after\x20they\x20go\x20boom\x20\u2013\x20once\x20the\x20circle\u2019s\x20complete,\x20the\x20inhibitor\x20starts\x20back\x20up.\x20Now\x20you\u2019ll\x20know\x20how\x20long\x20you\x20need\x20to\x20defend\x20your\x20nexus,\x20or,\x20if\x20you\u2019re\x20pressing\x20your\x20victory,\x20how\x20long\x20you\x20have\x20until\x20the\x20enemy\x20nexus\x20turns\x20invulnerable.",
+									src: "http://www.youtube.com/embed/G63fC76tuaw?rel=0"
+								}
+							},
+							"destructible-structures": {
+								position: [-46, -13],
+								type: "video",
+								anchor: "bottom",
+								popup: {
+									title: "Destructible\x20Structures",
+									description: "We\x20added\x20some\x20extra\x20tech\x20into\x20the\x20new\x20Summoner\u2019s\x20Rift,\x20meaning\x20towers\x20now\x20crumble\x20and\x20fall\x20apart\x20as\x20they\x20take\x20damage.\x20Not\x20only\x20that,\x20we\x20used\x20the\x20same\x20tech\x20for\x20the\x20map\u2019s\x20inhibitors\x20and\x20nexus,\x20so\x20ALL\x20THE\x20THINGS\x20visibly\x20suffer\x20under\x20enemy\x20aggression.",
+										src: "http://www.youtube.com/embed/tPGMz8CCYyg?rel=0"
+								}
+							},
+							"four-quadrants": {
+								position: [-20, -30],
+								anchor: "top",
+								type: "default",
+								popup: {
+									title: "Four\x20Quadrants",
+									description: "We\u2019ve\x20given\x20each\x20of\x20the\x20jungle\x20areas\x20a\x20unique\x20look\x20to\x20help\x20you\x20quickly\x20orient\x20yourself\x20on\x20the\x20map.\x20See\x20broken\x20redwoods\x3F\x20You\u2019re\x20looking\x20at\x20the\x20north\x20jungle.\x20Lush\x20green\x20life\x3F\x20That\u2019ll\x20be\x20the\x20south\x20jungle.\x20Cool\x20blue\x20cairn\x20stones\x3F\x20That\u2019s\x20the\x20east\x20jungle.\x20Withered\x20trees\x20and\x20purple\x20lights\x3F\x20West\x20jungle.\x20Gray\x20screen\x3F\x20You\u2019ve\x20died.\x20Try\x20harder."
+								}
+							},
+							"death-bush": {
+								position: [-69, -5],
+								type: "hidden",
+								anchor: "bottom",
+								popup: {
+									title: "Death\x20Bush",
+									description: "Please\x20don\u2019t\x20face\x2Dcheck\x20this.\x20You\u2019ll\x20die\x20and\x20your\x20team\x20will\x20be\x20all\x20\u201CWTF\x20DOOD\x3F\x21\u201D\x20Trust\x20us."
+								}
+							}
+						};
+						
+						
+        </script>
+        <script type="text/javascript" src="../../srift/bootleaf/assets/srmapexperience/js/vendor/leaflet-0.7.3/leaflet-src.js"></script>
+        <script type="text/javascript" src="../../srift/bootleaf/assets/srmapexperience/js/vendor/parallax.min.js"></script>
+        <script type="text/javascript" src="../../srift/bootleaf/assets/srmapexperience/js/vendor/media-match/media.match.min.js"></script>
+        <!--[IF IE]>
+          <script src="http://promo.euw.leagueoflegends.com/assets/srmapexperience/js/vendor/matchMedia.addListener.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="../../srift/bootleaf/assets/srmapexperience/js/vendor/enquire/dist/enquire.min.js"></script>
+        <script src="../../srift/bootleaf/assets/srmapexperience/js/vendor/owl.carousel.min.js"></script>
+        <script src="../../srift/bootleaf/assets/srmapexperience/js/vendor/snap.svg-min.js"></script>
+        <script src="../../srift/bootleaf/assets/srmapexperience/js/plugins.js"></script>
+        <script src="../../srift/bootleaf/assets/srmapexperience/js/main.js"></script>
+
+				
+				
+    
+
+
+</body></html>
