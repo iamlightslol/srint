@@ -1,0 +1,82 @@
+{
+  "files": [{
+    "source": "../../assets/srmapexperience/img/intro_bg.jpg",
+    "type": "IMAGE",
+    "size": 480891
+  },
+  {
+    "source": "../../assets/srmapexperience/img/intro_frame.png",
+    "type": "IMAGE",
+    "size": 564640
+  },
+  {
+    "source": "../../assets/srmapexperience/img/title_welcome.png",
+    "type": "IMAGE",
+    "size": 8517
+  },
+  {
+    "source": "../../assets/srmapexperience/img/btn_intro.jpg",
+    "type": "IMAGE",
+    "size": 6785
+  },
+  {
+    "source": "../../assets/srmapexperience/img/dropdown_bg.jpg",
+    "type": "IMAGE",
+    "size": 9891
+  },
+  {
+    "source": "../../assets/srmapexperience/img/logo_lol.png",
+    "type": "IMAGE",
+    "size": 7356
+  },
+  {
+    "source": "../../assets/srmapexperience/img/map_zoom_bg.png",
+    "type": "IMAGE",
+    "size": 3498
+  },
+  {
+    "source": "../../assets/srmapexperience/img/popup_bg.jpg",
+    "type": "IMAGE",
+    "size": 9309
+  },
+  {
+    "source": "../../assets/srmapexperience/img/popup_tip.png",
+    "type": "IMAGE",
+    "size": 334
+  },
+  {
+    "source": "../../assets/srmapexperience/img/popup_title_dash.png",
+    "type": "IMAGE",
+    "size": 159
+  },
+  {
+    "source": "../../assets/srmapexperience/img/share_btn_bg.png",
+    "type": "IMAGE",
+    "size": 1931
+  },
+  {
+    "source": "../../assets/srmapexperience/img/share_btn_sm.png",
+    "type": "IMAGE",
+    "size": 1957
+  },
+  {
+    "source": "../../assets/srmapexperience/js/vendor/parallax.min.js",
+    "type": "SCRIPT",
+    "size": 9350
+  },
+  {
+    "source": "../../assets/srmapexperience/js/vendor/modernizr-2.6.2.min.js",
+    "type": "SCRIPT",
+    "size": 15414
+  },
+  {
+    "source": "../../assets/srmapexperience/js/vendor/enquire/dist/enquire.min.js",
+    "type": "SCRIPT",
+    "size": 2254
+  },
+  {
+    "source": "../../assets/srmapexperience/js/vendor/media-match/media.match.min.js",
+    "type": "SCRIPT",
+    "size": 2980
+  }]
+}

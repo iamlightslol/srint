@@ -374,7 +374,7 @@ var markers = {
 	Map
 ========================== */
 
-var map_asset_url = '../../sr-map-assets';
+var map_asset_url = 'https://srift-iamlightslol-1.c9.io/Zoom';
 
 var maxBounds = L.latLngBounds(
 	L.latLng(-85.0511,-180),
@@ -385,9 +385,7 @@ var map = L.map('map',{
 	zoomControl: true,
 	attributionControl: false,
 	maxBounds: maxBounds
-	}).setView(
-	(location.hash.slice(1) && get_poi(location.hash.slice(1)).position) || poi["the-bases"].position,
-	5,
+	}).setView(poi["the-bases"].position,	5,
 	{
 		crs: L.CRS.Simple
 	}
@@ -395,9 +393,9 @@ var map = L.map('map',{
 var min_zoom = 3
 if (isMobile==true && isIpad ==false) min_zoom = 2;
 new L.Control.Zoom({ position: 'bottomright', zoomInTitle: '', zoomOutTitle: ''}).addTo(map);
-L.tileLayer(map_asset_url+'/{z}/{x}/{y}.png',{
+L.tileLayer(map_asset_url+'/{z}/{x}-{y}.png',{
 	minZoom: min_zoom,
-	maxZoom: 6,
+	maxZoom: 5,
 	tms: true,
 	noWrap: true,
 	animate: true,
